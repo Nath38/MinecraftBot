@@ -83,7 +83,7 @@ client.on('message', message => {
       var help_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setTitle('Voici les commandes !')
-      .setDescription('Mon prefix est **p.** et pour utiliser un commande faites **p.<Commande>**')
+      .setDescription('Mon prefix est **!** et pour utiliser un commande faites **!<Commande>**')
       .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
       .addField('youtube', "Lien de la chaîne YouTube de Rayan")
       .addField('ip', 'IP du serveur Minecraft')
