@@ -8,6 +8,12 @@ client.on('ready', () => {
   console.log('Le bot est prêt!')
 });
 
-client.login(process.env.TOKEN);
+client.on('message', message => {
+  if (message.content === prefix + 'ip') {
+    message.reply('L’ip du serveur est: myragyt.aternos.me')
+    message.delete()
+  }
+})
 
+client.login(process.env.TOKEN);
 
