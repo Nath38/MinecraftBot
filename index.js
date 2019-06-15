@@ -40,4 +40,42 @@ client.on('guildMemberRemove', member =>{
  
 });
 
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + 'mp')){
+
+    var args = message.content.split(" ").slice(1);
+    var msge = args.join(' ');
+
+    if(!message.guild.member(message.author).hasPermission('ADMINISTRATOR')) return message.channel.send("Tu ne peux pas utiliser cette commande.");
+    if(!msge) return message.channel.send('Precise un message !')
+
+    var mpall = new Discord.RichEmbed()
+    .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+    .setTimestamp()
+    .setColor('RANDOM')
+    .addField('Annonce à lire', msge);
+    message.delete()
+    message.guild.members.map(m => m.send(mpall))
+  }
+});
+
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + 'say')){
+
+    var args = message.content.split(" ").slice(1);
+    var messageToBot = args.join(' ');
+
+    if(!message.guild.member(message.author).hasPermission('ADMINISTRATOR')) return message.channel.send("Tu ne peux pas utiliser cette commande.");
+    if(!messageToBot) return message.channel.send('Precise un message !')
+
+    var say = new Discord.RichEmbed()
+    .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+    .setTimestamp()
+    .setColor('RANDOM')
+    .addField('Annonce à lire', messageToBot);
+    message.delete()
+    message.channel.send(say);
+  }
+});
+
 client.login(process.env.TOKEN);
