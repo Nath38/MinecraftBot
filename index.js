@@ -78,4 +78,21 @@ client.on('message', async message => {
   }
 });
 
+client.on('message', message => {
+    if (message.content === prefix + 'help') {
+      var help_embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Voici les commandes !')
+      .setDescription('Mon prefix est **p.** et pour utiliser un commande faites **p.<Commande>**')
+      .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+      .addField('youtube', "Lien de la chaîne YouTube de Rayan")
+      .addField('ip', 'IP du serveur Minecraft')
+      .addField('mp', 'Réservé au admin')
+      .addField('say', 'Reservé au admin')
+      .setTimestamp()
+      message.delete()
+      message.channel.send(help_embed);
+    }
+  })
+
 client.login(process.env.TOKEN);
