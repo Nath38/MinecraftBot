@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const fs = require('fs')
 const client = new Discord.Client()
 
-var prefix = ('!')
+var prefix = ('+')
 
 client.on('ready', () => {
   console.log('Le bot est prêt!')
@@ -97,7 +97,7 @@ client.on('message', message => {
       var help_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setTitle('Voici les commandes !')
-      .setDescription('Mon prefix est **!** et pour utiliser un commande faites **!<Commande>**')
+      .setDescription('Mon prefix est **+** et pour utiliser un commande faites **+<Commande>**')
       .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
       .addField('youtube', "Lien de la chaîne YouTube de Rayan")
       .addField('ip', 'IP du serveur Minecraft')
