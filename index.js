@@ -8,6 +8,11 @@ client.on('ready', () => {
   console.log('Le bot est prêt!')
 });
 
+client.on('ready', () => {
+  client.user.setGame('+help')
+  console.log('Joue à +help')
+})
+
 client.on('message', message => {
   if (message.content === prefix + 'ip') {
     message.reply('L’ip du serveur est: myragyt.aternos.me')
