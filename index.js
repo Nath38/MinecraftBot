@@ -32,7 +32,7 @@ client.on('guildMemberAdd', member =>{
         .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
         .setColor('#7FFF00')
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-    member.guild.channels.get('588810496052953113').send(embed)
+    member.guild.channels.get('589495005270376479').send(embed)
  
 });
 
@@ -41,7 +41,7 @@ client.on('guildMemberRemove', member =>{
         .setDescription(':cry: **' + member.user.username + '** a quitté ' + member.guild.name)
         .setColor('#B22222')
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-    member.guild.channels.get('588810496052953113').send(embed)
+    member.guild.channels.get('589495005270376479').send(embed)
  
 });
 
