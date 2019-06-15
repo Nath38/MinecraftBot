@@ -31,11 +31,6 @@ client.on('guildMemberAdd', member =>{
  
 });
 
-client.on('gildMemberAdd', member =>{
-      var role = membre.guild.roles.find('joueur')
-      member.addRole(role)
-})
-
 client.on('guildMemberRemove', member =>{
     let embed = new Discord.RichEmbed()
         .setDescription(':cry: **' + member.user.username + '** a quitté ' + member.guild.name)
