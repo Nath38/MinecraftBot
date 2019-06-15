@@ -15,5 +15,11 @@ client.on('message', message => {
   }
 })
 
-client.login(process.env.TOKEN);
+client.on('message', message => {
+  if (message.content === prefix + 'youtube') {
+    message.reply('La chaîne Youtube de Rayan est https://www.youtube.com/channel/UC1vlGxvuH_HxiCxACLDtO5w')
+    message.delete()
+  }
+})
 
+client.login(process.env.TOKEN);
