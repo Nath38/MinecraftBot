@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member =>{
         .setColor('#7FFF00')
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     member.guild.channels.get('589495005270376479').send(embed)
-    member.addRole('joueur')
+    member.addRole('588807227352285185')
  
 });
 
