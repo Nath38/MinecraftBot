@@ -8,6 +8,6 @@ client.on('ready', () => {
   console.log('Le bot est prêt!')
 });
 
-
+client.login(process.env.TOKEN);
 
 
