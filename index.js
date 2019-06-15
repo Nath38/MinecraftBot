@@ -43,7 +43,7 @@ client.on('guildMemberRemove', member =>{
 client.on('message', async message => {
   if(message.content.startsWith(prefix + 'mp')){
 
-    var args = message.co'ntent.split(" ").slice(1);
+    var args = message.content.split(" ").slice(1);
     var msge = args.join(' ');
 
     if(!message.guild.member(message.author).hasPermission('ADMINISTRATOR')) return message.channel.send("Tu ne peux pas utiliser cette commande.");
