@@ -142,7 +142,7 @@ client.on('message', message => {
 
 client.on('guildMemberAdd', member =>{
   var role = member.guild.roles.find('name', 'joueur')
-  member.addRole('role')
+  member.addRole(role)
   
 });
 
