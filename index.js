@@ -141,7 +141,8 @@ client.on('message', message => {
 })
 
 client.on('guildMemberAdd', member =>{
-  member.addRole('588807227352285185')
+  var role = member.guild.roles.find('name', 'joueur')
+  member.addRole('role')
   
 });
 
