@@ -126,7 +126,7 @@ client.on('message', message => {
   })
 
 client.on('message', message => {
-  if (message.content === prefix + 'info {
+  if (message.content === prefix + 'info' {
     var server_embed = new Discord.RichEmbed()
     .setColor('RANDOM')
     .setDescription("Informations du serveur")
