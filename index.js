@@ -114,6 +114,7 @@ client.on('message', message => {
       .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
       .addField('youtube', "Lien de la chaîne YouTube de Rayan")
       .addField('ip', 'IP du serveur Minecraft')
+      .addField('membre', 'Pour savoir combien somme ton sur le serveur')
       .addField('mp', 'Réservé aux admin')
       .addField('say', 'Reservé aux admin')
       .addField('clear', 'Reservé aux admin')
