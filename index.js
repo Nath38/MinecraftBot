@@ -115,6 +115,7 @@ client.on('message', message => {
       .addField('youtube', "Lien de la chaîne YouTube de Rayan")
       .addField('ip', 'IP du serveur Minecraft')
       .addField('membre', 'Pour savoir combien somme ton sur le serveur')
+      .addField('info', "Pour plus d'information sur le serveur")
       .addField('mp', 'Réservé aux admin')
       .addField('say', 'Reservé aux admin')
       .addField('clear', 'Reservé aux admin')
@@ -123,5 +124,20 @@ client.on('message', message => {
       message.channel.send(help_embed);
     }
   })
+
+client.on('message', message => {
+  if (message.content === prefix + 'info {
+    var server_embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setDescription("Informations du serveur")
+    .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+    .addField("Server Name", message.guild.name)
+    .addField("Créé le", message.guild.createdAt)
+    .addField("Vous avez rejoint le", message.member.joinedAt)
+    .addField("Total Membre", message.guild.memberCount);
+    message.delete()
+    message.channel.send(server_embed);
+  }
+})
 
 client.login(process.env.TOKEN);
