@@ -99,6 +99,13 @@ client.on("message", message => {
 })
 
 client.on('message', message => {
+  if (message.content === prefix + 'membre') {
+    message.channel.send('Nous somme ' + message.guild.memberCount + ' sur ' + message.guild.name)
+    message.delete()
+  }
+})
+
+client.on('message', message => {
     if (message.content === prefix + 'help') {
       var help_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
