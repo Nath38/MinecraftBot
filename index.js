@@ -125,14 +125,6 @@ client.on("message", message => {
 })
 
 client.on('message', message => {
-    if (message.content === prefix + 'rip') {
-      message.channel.send('https://i.imgur.com/w3duR07.png')
-      message.delete()
-    }
-  })
-
-
-client.on('message', message => {
   if (message.content === prefix + 'membre') {
     message.channel.send('Nous somme ' + message.guild.memberCount + ' sur ' + message.guild.name)
     message.delete()
