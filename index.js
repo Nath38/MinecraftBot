@@ -103,7 +103,7 @@ client.on("message", message => {
       if (!member) return message.channel.send("Membre introuvable")
       if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send("Vous ne pouvez pas mute ce membre")
       if (member.highestRole.calculatedPosition >= message.guild.me.highestRole.calculatedPosition || member.id === message.guild.ownerID) return message.channel.send("Je ne peux pas mute ce membre")
-      let muterole = message.guild.roles.find(role => role.name === 'mute')
+      let muterole = message.guild.roles.find(role => role.name === 'Mute')
       let userrole = message.guild.roles.find(role => role.name === 'joueur')
       if (muterole) {
           member.removeRole(userrole)
@@ -111,7 +111,7 @@ client.on("message", message => {
           message.channel.send(member + ' a été mute :white_check_mark:')
       }
       else {
-          message.guild.createRole({name: 'Muted', permissions: 0}).then((role) => {
+          message.guild.createRole({name: 'Mute', permissions: 0}).then((role) => {
               message.guild.channels.filter(channel => channel.type === 'text').forEach(channel => {
                   channel.overwritePermissions(role, {
                       SEND_MESSAGES: false
