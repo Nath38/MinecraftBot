@@ -21,6 +21,14 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
+    if (message.content === prefix + 'ping') {
+      message.channel.send('Calcul ...').then(message => {
+      message.edit('Pong ! '+ Math.round(client.ping) + 'ms')
+        })
+      }
+    })
+
+client.on('message', message => {
   if (message.content === prefix + 'youtube') {
     message.reply('La chaîne Youtube de Rayan est https://www.youtube.com/channel/UC1vlGxvuH_HxiCxACLDtO5w')
     message.delete()
@@ -142,6 +150,7 @@ client.on('message', message => {
       .addField('ip', 'IP du serveur Minecraft')
       .addField('membre', 'Pour savoir combien somme ton sur le serveur')
       .addField('info', "Pour plus d'information sur le serveur")
+      .addField('ping', 'Calculer le ping du bot')
       .addField('help2', 'Commande administrateur')
       .setTimestamp()
       message.delete()
