@@ -142,9 +142,25 @@ client.on('message', message => {
       .addField('ip', 'IP du serveur Minecraft')
       .addField('membre', 'Pour savoir combien somme ton sur le serveur')
       .addField('info', "Pour plus d'information sur le serveur")
-      .addField('mp', 'Réservé aux admin')
-      .addField('say', 'Reservé aux admin')
-      .addField('clear', 'Reservé aux admin')
+      .addField('help2', 'Commande administrateur')
+      .setTimestamp()
+      message.delete()
+      message.channel.send(help_embed);
+    }
+  })
+
+client.on('message', message => {
+    if (message.content === prefix + 'help2') {
+      var help_embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Voici les commandes admin !')
+      .setDescription('Mon prefix est **' + prefix + '** et pour utiliser un commande faites **' + prefix +'<Commande>**')
+      .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+      .addField('mp', 'Envoyer un message privé à tout le serveur')
+      .addField('say', 'Ecrire un annonce')
+      .addField('clear', 'Effacer des message')
+      .addField('mute', 'Mute un joueur')
+      .addField('unmute', 'Unmute un joueur')
       .setTimestamp()
       message.delete()
       message.channel.send(help_embed);
