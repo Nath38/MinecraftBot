@@ -151,6 +151,7 @@ client.on('message', message => {
       .addField('membre', 'Pour savoir combien somme ton sur le serveur')
       .addField('info', "Pour plus d'information sur le serveur")
       .addField('ping', 'Calculer le ping du bot')
+      .addField('infos', 'Information sur le bot')
       .addField('help2', 'Commande administrateur')
       .setTimestamp()
       message.delete()
@@ -245,5 +246,21 @@ client.on("message", message => {
           message.channel.send(member + ' a été unmute :white_check_mark:')
       }
    })
+
+client.on('message', message => {
+    if (message.content === prefix + 'infos') {
+      var infos_embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Voici mes informations !')
+      .setDescription('')
+      .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
+      .addField('Crée par:', "<@!315211194518470677>")
+      .addField('Donations', " https://www.paypal.me/Chauchet ")
+      .setTimestamp()
+      message.delete()
+      message.channel.send(infos_embed);
+    }
+  })
+
 
 client.login(process.env.TOKEN);
