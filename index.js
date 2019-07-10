@@ -22,6 +22,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === prefix + 'ping') {
+      message.delete()
       message.channel.send('Calcul ...').then(message => {
       message.edit('Pong ! '+ Math.round(client.ping) + 'ms')
         })
