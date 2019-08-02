@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === prefix + 'ip') {
-    message.reply('L’ip du serveur est: myragyt.aternos.me')
+    message.reply("Le serveur n'est pas ouvert pour le moment")
     message.delete()
   }
 })
@@ -31,7 +31,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === prefix + 'youtube') {
-    message.reply('La chaîne Youtube de Rayan est https://www.youtube.com/channel/UC1vlGxvuH_HxiCxACLDtO5w')
+    message.reply('La chaîne Youtube de <@!315211194518470677> est https://www.youtube.com/channel/UCYLESxSomWcXTyeT-qLKWXw')
     message.delete()
   }
 })
@@ -147,7 +147,7 @@ client.on('message', message => {
       .setTitle('Voici les commandes !')
       .setDescription('Mon prefix est **' + prefix + '** et pour utiliser un commande faites **' + prefix +'<Commande>**')
       .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
-      .addField('youtube', "Lien de la chaîne YouTube de Rayan")
+      .addField('youtube', "Lien de la chaîne YouTube de <@!315211194518470677>")
       .addField('ip', 'IP du serveur Minecraft')
       .addField('membre', 'Pour savoir combien somme ton sur le serveur')
       .addField('info', "Pour plus d'information sur le serveur")
@@ -168,8 +168,8 @@ client.on('message', message => {
       .setDescription('Mon prefix est **' + prefix + '** et pour utiliser un commande faites **' + prefix +'<Commande>**')
       .setFooter('Commande exécuter par : ' + message.author.tag, message.author.avatarURL)
       .addField('mp', 'Envoyer un message privé à tout le serveur')
-      .addField('say', 'Ecrire un annonce')
-      .addField('clear', 'Effacer des message')
+      .addField('say', 'Ecrire une annonce')
+      .addField('clear', 'Effacer des messages')
       .addField('mute', 'Mute un joueur')
       .addField('unmute', 'Unmute un joueur')
       .setTimestamp()
