@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === prefix + 'ip') {
-    message.reply("Le serveur n'est pas ouvert pour le moment")
+    message.reply("L'IP du serveur minecraft est 	195.201.85.95:25845")
     message.delete()
   }
 })
