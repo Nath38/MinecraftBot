@@ -6,7 +6,7 @@
     "discord.js": "^11.4.2",
     "fs": "0.0.1-security"
   },
-  "author": "Alexis",
+  "author": "Nathof",
   "license": "MIT",
   "dependencies": {
     "better-sqlite-pool": "^0.2.0",
